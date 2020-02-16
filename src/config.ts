@@ -4,6 +4,7 @@ export type Config = {
   filterBy: string;
   resultsToShow: number;
   charsBeforeResults: number;
+  resultContainerEl: string;
   item: (item: object) => string;
 };
 
@@ -13,8 +14,9 @@ export const DefaultConfig: Config = {
   filterBy: 'title',
   resultsToShow: 3,
   charsBeforeResults: 3,
+  resultContainerEl: 'ul',
   item: () =>
-    `<li class="list-item>
+    `<li class="list-item">
             <a href="javascript:;"></a>
         </li>`
 };

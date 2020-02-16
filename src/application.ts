@@ -34,7 +34,7 @@ export default class Application {
     const wrapper = document.createElement('div');
     wrapper.classList.add('suggested-search');
 
-    this.resultsContainer = document.createElement('div');
+    this.resultsContainer = document.createElement(this.config.resultContainerEl);
     this.resultsContainer.classList.add('suggested-search__list');
     this.resultsContainer.classList.add('hide-list');
 
