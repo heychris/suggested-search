@@ -1,3 +1,5 @@
+import './polyfills';
+
 import Application from './application';
 import { Config, DefaultConfig } from './config';
 
@@ -12,8 +14,6 @@ export default class SuggestedSearch {
   }
 
   initialize(): Application[] {
-    return Array.from(this.config.elements).map(
-      el => new Application(el, this.config)
-    );
+    return Array.from(this.config.elements).map(el => new Application(el, this.config));
   }
 }

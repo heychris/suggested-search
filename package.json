@@ -28,7 +28,7 @@
     "@rollup/plugin-node-resolve": "^6.1.0",
     "@rollup/plugin-typescript": "^2.0.2",
     "@types/jest": "^25.1.2",
-    "core-js": "^3.6.2",
+    "core-js": "^3.6.4",
     "jest": "^25.1.0",
     "jest-fetch-mock": "^3.0.1",
     "rollup": "^1.27.14",
@@ -42,5 +42,8 @@
     "build": "tsc -b && rollup -c --environment BUILD:prod",
     "watch": "rollup -wc --environment BUILD:dev",
     "test": "jest"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^3.0.0"
   }
 }
