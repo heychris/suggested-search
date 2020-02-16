@@ -39,8 +39,8 @@
   },
   "scripts": {
     "clean": "rm -fr dist",
-    "build": "tsc -b && rollup -c",
-    "watch": "rollup -wc",
+    "build": "tsc -b && rollup -c --environment BUILD:prod",
+    "watch": "rollup -wc --environment BUILD:dev",
     "test": "jest"
   }
 }

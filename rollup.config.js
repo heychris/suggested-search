@@ -6,24 +6,26 @@ import serve from 'rollup-plugin-serve';
 import { main, version } from './package.json';
 
 const config = {
-  plugins: [typescript(), commonjs(), resolve(), serve()],
+  input: 'src/index.ts',
+  output: {
+    banner: `/*\nSuggested Search ${version}\n*/`,
+    file: main,
+    format: 'umd',
+    name: 'SuggestedSearch',
+    sourcemap: true
+  },
+  plugins: [typescript(), commonjs(), resolve()],
   watch: {
     include: 'src/**'
   }
 };
 
-export default [
-  {
-    input: 'src/index.ts',
-    output: {
-      banner: `/*
-Suggested Search - ${version}
-*/`,
-      file: main,
-      format: 'umd',
-      name: 'SuggestedSearch',
-      sourcemap: true
-    },
-    ...config
-  }
-];
+if (process.env.BUILD === 'dev') {
+  config.plugins.push(
+    serve({
+      contentBase: ['examples', 'dist']
+    })
+  );
+}
+
+export default config;
