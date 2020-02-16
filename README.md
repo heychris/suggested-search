@@ -26,4 +26,5 @@ new SuggestedSearch({
 | filterBy           | Object key upon which the search input will compare against               |
 | resultsToShow      | Maximum results to show at one time                                       |
 | charsBeforeResults | Minimum number of characthers user must type before results start to show |
+| resultContainerEl  | The HTML element that wraps the search results                            |
 | item               | Function that gets mapped over the data item                              |
