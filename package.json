@@ -32,7 +32,7 @@
     "jest": "^25.1.0",
     "jest-fetch-mock": "^3.0.1",
     "rollup": "^1.27.14",
-    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-serve": "^1.0.2",
     "ts-jest": "^25.2.0",
     "tslib": "^1.10.0",
     "typescript": "^3.7.4"
